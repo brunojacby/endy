@@ -1,0 +1,25 @@
+<section class="w-full flex">
+    {{#each categories}}
+    <div class="categories-div">
+        <h2>{{uppercase categoryName}}</h2>
+        <div class="container-imgs">
+            {{#each categoryProducts}}
+            <div class="image-container">
+                <img alt="{{name}}" src="{{image}}" width="100%" height="100%" />
+                <div class="overlay">
+                    <span>{{uppercase name}}</span>
+                    <div>
+                        <span>{{formatPriceBRL price}}</span>
+                        <span class="btn-plus">+</span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    {{/each}}
+</section>
+{{>about}}
+{{>mailing}}
+
+<link rel="stylesheet" href="/css/index.css">
