@@ -2,12 +2,17 @@
     <div class="container-nav">
         <div class="image-logo">{{> logo }}</div>
         {{> searchbar}}
-        {{> buttons-header }}
+        <div class="buttons-header">
+            <button class="btn" type="button"><span class="material-symbols-outlined">person</span></button>
+            <button class="btn" type="button"><span class="material-symbols-outlined">shopping_bag</span></button>
+            <button class="btn toggleButton" type="button"><span class="material-symbols-outlined">menu</span></button>
+        </div>
     </div>
-    {{!-- <div class="expand-nav">
+    <div class="expand-nav" id="menu">
         <div class="inner-nav">
             <div class="inner-nav-btn">
-                <img src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png" alt="" />
+                <img src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png"
+                    alt="Close button menu" class="toggleButton" width="50px" height="50px" />
             </div>
             <div class="inner-nav-categories">
                 <div>
@@ -29,7 +34,24 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 </header>
 
 <link rel="stylesheet" href="/css/header.css">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleButtons = document.querySelectorAll('.toggleButton');
+        const element = document.getElementById('menu');
+
+        toggleButtons.forEach(function (botao) {
+            botao.addEventListener('click', function () {
+                if (element.style.display === 'block') {
+                    element.style.display = 'none';
+                } else {
+                    element.style.display = 'block';
+                }
+            });
+        });
+    })
+</script>

@@ -22,13 +22,13 @@ handlebars.registerHelper("uppercase", function (text) {
   }
 });
 
-handlebars.registerHelper("formatPriceBRL", function (price) {  
-  if (typeof price === "number") {    
+handlebars.registerHelper("formatPriceBRL", function (price) {
+  if (typeof price === "number") {
     return price.toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
     });
-  } else {    
+  } else {
     return "";
   }
 });
@@ -73,10 +73,12 @@ const categories = () => {
   ];
 };
 
+const menuItems = ["home", "produtos", "carrinho", "login"];
 app.get("/", (req, res) => {
   res.render("index", {
     layout: "main",
     categories: categories,
+    menuItems: menuItems,
   });
 });
 
