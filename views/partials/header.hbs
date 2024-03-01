@@ -1,11 +1,11 @@
 <header>
     <div class="container-nav">
-        <div class="image-logo">{{> logo }}</div>
+        <a href="/" class="image-logo">{{> logo }}</a>
         {{> searchbar}}
         <div class="buttons-header">
-            <button class="btn" type="button"><span class="material-symbols-outlined">person</span></button>
-            <button class="btn" type="button"><span class="material-symbols-outlined">shopping_bag</span></button>
-            <button class="btn toggleButton" type="button"><span class="material-symbols-outlined">menu</span></button>
+            <a class="btn" href="/login"><span class="material-symbols-outlined">person</span></a>
+            <a class="btn" href="/carrinho"><span class="material-symbols-outlined">shopping_bag</span></a>
+            <button type="button" class="btn toggleButton"><span class="material-symbols-outlined">menu</span></button>
         </div>
     </div>
     <div class="expand-nav" id="menu">

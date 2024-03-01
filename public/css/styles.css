@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Gotham";
-  src: url("../fonts/gotham-thin.eot");
-  src: url("../fonts/gotham-thin.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/gotham-thin.woff2") format("woff2"),
-    url("../fonts/gotham-thin.woff") format("woff"),
-    url("../fonts/gotham-thin.ttf") format("truetype"),
-    url("../fonts/gotham-thin.svg#gotham-thin") format("svg");
-  font-weight: 100;
-  font-style: normal;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;

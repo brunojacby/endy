@@ -82,6 +82,25 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/login", (req, res) => {
+  res.render("login", {
+    layout: "main",
+  });
+});
+
+app.get("/cadastro", (req, res) => {
+  res.render("cadastro", {
+    layout: "main",
+  });
+});
+
+app.get("/carrinho", (req, res) => {
+  res.render("carrinho", {
+    layout: "main",
+  });
+});
+
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });

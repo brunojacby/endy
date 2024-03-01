@@ -102,3 +102,15 @@
   align-items: center;
   gap: 5px;
 }
+
+.todos-div {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #D2BE9B;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+}
