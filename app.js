@@ -100,6 +100,11 @@ app.get("/carrinho", (req, res) => {
   });
 });
 
+app.use((req, res, next) => {
+  res.status(404).render("not-found", {
+    layout: "main",
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
