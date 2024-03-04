@@ -1,4 +1,4 @@
-header {
+.header-nav {
   height: 60px;
   line-height: 60px;
   font-size: 0.9em;
@@ -12,15 +12,9 @@ header {
   z-index: 20;  
 }
 
-header a {
+.header-nav a {
   color: inherit;
   text-decoration: none;
-}
-
-.searchbar input {
-  padding: 5px 10px;
-  border-radius: 10px;
-  border: 1px solid grey;
 }
 
 .container-nav {
