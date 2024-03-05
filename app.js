@@ -7,6 +7,7 @@ import handlebars from "handlebars";
 const PORT = process.env.PORT || 3000;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+
 const app = express();
 
 const hbs = exphbs.create({
@@ -32,6 +33,7 @@ handlebars.registerHelper("formatPriceBRL", function (price) {
     return "";
   }
 });
+
 
 app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
