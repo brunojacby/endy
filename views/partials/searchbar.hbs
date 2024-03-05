@@ -1,3 +1,56 @@
-<div class="h-[32px]">
-    <input type="search" placeholder="Buscar..." class="border rounded-lg w-full h-full px-2 py-4 text-base" />
+<div class="w-[300px] h-[32px] relative flex flex-col">
+    <input id="inputPesquisa" type="search" placeholder="Buscar..."
+        class="border rounded-lg w-full h-full px-2 py-4 text-base" onclick="openSearch()"
+        onkeydown="debounce(searchProduct, 300)" />
+    <span class="material-symbols-outlined absolute right-0 p-1">search</span>
+    <div
+        class="relative border rounded-md w-[800px] -ml-[250px] mt-4 hidden flex-col items-center p-4 bg-white searcharea">
+        <button type="button"
+            class="rounded-full bg-[#808080] text-white font-bold w-fit h-auto px-6 py-2 cursor-pointer self-end"
+            onclick="openSearch()">FECHAR</button>
+        <span>Para pesquisar, digite a palavra e aguarde...</span>
+    </div>
 </div>
+
+<style>
+    .searcharea {
+        box-shadow: 0 0px 20px #61D6CC;
+    }
+
+    .searcharea button {
+        line-height: 10px;
+    }
+</style>
+
+<script>
+    let timeoutId;
+
+    function debounce(func, delay) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(func, delay);
+    }
+
+    function openSearch() {
+        const searchArea = document.querySelector('.searcharea');
+        if (searchArea.style.display === 'flex') {
+            searchArea.style.display = 'none';
+        } else {
+            searchArea.style.display = 'flex';
+        }
+    }
+
+    function searchProduct() {
+        const searchText = document.getElementById("inputPesquisa").value;
+        if (searchText !== '') {
+            console.log("Pesquisando por: " + searchText);
+        }
+    }
+
+    document.getElementById("inputPesquisa").addEventListener("keypress", function (event) {
+        // Verifica se a tecla pressionada foi 'Enter'
+        if (event.key === "Enter") {
+            // Chama a função fazerPesquisa()
+            debounce(searchProduct, 300);
+        }
+    });
+</script>

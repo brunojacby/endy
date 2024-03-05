@@ -1,56 +1,20 @@
-<section class="mailing">
-    <div>
-        <h3><span>CADASTRE-SE</span> <br>NO NOSSO MAILING E<br> <span>GANHE 10%</span> <br>NA SUA PRIMEIRA COMPRA.</h3>
-        <div>
-            <input type="text" placeholder="nome" />
-            <input type="email" placeholder="e-mail" />
-            <button>CADASTRAR</button>
+<section class="mailing bg-[#D2BE9B] h-[200px] w-full">
+    <div class="w-[920px] mx-auto flex justify-between items-center h-full gap-2">
+        <h3 class="text-white w-[50%]"><span>CADASTRE-SE</span> <br>NO NOSSO MAILING E<br> <span>GANHE 10%</span> <br>NA SUA PRIMEIRA COMPRA.</h3>
+        <div class="flex flex-col gap-2 w-[50%]">
+            <input type="text" placeholder="nome" class="w-[300px] border rounded-md px-2"/>
+            <input type="email" placeholder="e-mail" class="w-[300px] border rounded-md px-2" />
+            <button class="text-sm w-fit border rounded-md bg-[#444444] border-[#444444] text-white py-2 px-6">CADASTRAR</button>
         </div>
     </div>
 </section>
 
 <style>
-    .mailing {
-        width: 100%;
-        background-color: #D2BE9B;
-        height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mailing div {
-        display: flex;
-        padding: 10px;
-        gap: 5px;
-    }
-
     .mailing div h3 {
         font-weight: normal;
     }
 
-    .mailing div h3 span {
+    .mailing div span {
         font-weight: bold;
-    }
-
-    .mailing div div {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-    }
-
-    .mailing div div input {
-        width: 150px;
-        border: none;
-        border-radius: 4px;
-        padding: 2px 5px;
-    }
-
-    .mailing div div button {
-        width: 150px;
-        border: none;
-        border-radius: 4px;
-        padding: 5px 15px;
-        font-weight: 600;
-    }
+    }  
 </style>

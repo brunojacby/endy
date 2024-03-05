@@ -73,34 +73,10 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.about-inner {
-  width: 750px;
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  padding: 40px;
-}
-
-.about-text {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  overflow: hidden;
-  white-space: wrap;
-  text-overflow: ellipsis;
-  width: 300px;
-  padding-top: 50px;
-}
-
-.about-text div {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.about-inner {  
+  font-family: "Open Sans", sans-serif;
 }
 
 .todos-div {
@@ -109,7 +85,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background-color: #D2BE9B;
+  background-color: #d2be9b;
   color: white;
   padding: 20px;
   cursor: pointer;
