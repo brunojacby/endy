@@ -12,17 +12,14 @@ body {
   background-color: white;
 }
 
-.image-logo {
-  width: 180px;
-  height: 60px;
-}
-
 .hero {
-  background-size: cover;
+  position: relative;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 240px;
+  height: 400px;
   background-color: white;
   background-image: url("/images/bg-visual_logo_black_large.png");
+  padding: 10px 0px;
 }
 
 .categories-div {
